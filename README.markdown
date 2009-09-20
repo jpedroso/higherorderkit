@@ -1,6 +1,10 @@
 # HigherOrderKit: Higher Order Functions for Cocoa.
 
-HigherOrderKit is an attempt to bring common higher order functions to Objective-C, more specifically to Cocoa.
+HigherOrderKit is an attempt to bring common higher order functions to Objective-C, more specifically to Foundation framework classes.
+
+Foundation framework already include higher order functions for some of its classes but they are little familiar with their equivalents in other languages, like Lisp, Haskell, JavaScript or Python to name a few.
+
+Such functions include map, reduce (a.k.a. fold), select (a.k.a. filter), intersperse and, to some degree, also forEach.
 
 ## Setup/Installation
 
