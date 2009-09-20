@@ -27,6 +27,18 @@
     STAssertTrue([result isLike:@""], nil);
 }
 
+#pragma mark -
+
+- (void)testSelect
+{
+    NSArray *given = [NSArray arrayWithObjects:@"a", @"A", @"b", nil];
+
+    NSArray *results = [given select:^(NSString *item) { return [item isLike:@"A"]; }];
+
+    STAssertTrue([results count] == 1, nil);
+    STAssertTrue([[results objectAtIndex:0] isLike:@"A"], nil);
+}
+
 
 
 @end

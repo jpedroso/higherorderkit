@@ -12,4 +12,11 @@
 - (void)forEach:(void (^)(id obj))block;
 
 
+/*!
+    @method     select:
+    @abstract   Evaluates a given block with each object in the receiver and returns a new array
+                containing the objects for which the block returns true.
+    @seealso    filteredArrayUsingPredicate:
+*/
+- (NSArray *)select:(BOOL (^)(id obj))block;
 @end
