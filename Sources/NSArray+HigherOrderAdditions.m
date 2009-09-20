@@ -4,6 +4,16 @@
 @implementation NSArray (HigherOrderAdditions)
 
 
+- (NSArray *)map:(id (^)(id obj))block
+{
+    NSMutableArray *newMap = [NSMutableArray arrayWithCapacity:[self count]];
+    for (id anObject in self)
+        [newMap addObject:block(anObject)];
+
+    return [NSArray arrayWithArray:newMap];
+}
+
+
 #pragma mark -
 
 

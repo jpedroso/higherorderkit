@@ -7,6 +7,19 @@
 
 #pragma mark -
 
+- (void)testMap
+{
+    NSArray *given = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
+
+    NSArray *results = [given map:^(NSString *item) { return [item uppercaseString]; }];
+
+    NSAssert([[results objectAtIndex:0] isLike:@"A"], @"A expected");
+    NSAssert([[results objectAtIndex:1] isLike:@"B"], @"B expected");
+    NSAssert([[results objectAtIndex:2] isLike:@"C"], @"C expected");
+}
+
+#pragma mark -
+
 - (void)testForEach
 {
     NSArray *given = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
